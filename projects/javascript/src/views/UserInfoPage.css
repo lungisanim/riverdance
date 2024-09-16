@@ -1,0 +1,12 @@
+.app-user-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.navigation-buttons.right-aligned {
+    display: flex;
+    justify-content: flex-end;
+}

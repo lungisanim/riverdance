@@ -3,7 +3,7 @@ import { GoogleLogin } from '@react-oauth/google';
 
 function LoginPage({ onSuccess, onError }) {
     const [text, setText] = useState('');
-    const fullText = '... create the things you want to see ...';
+    const fullText = '.... create the things you want to see ...';
 
     useEffect(() => {
         let index = 0;

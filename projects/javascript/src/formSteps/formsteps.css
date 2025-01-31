@@ -1,9 +1,0 @@
-.form-steps-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .form-steps-content {
-    width: 80%;
-    max-width: 600px;
-  }

@@ -4,15 +4,33 @@ import './app.css';
 import LoginPage from './views/LoginPage';
 import TermsPage from './views/TermsPage';
 import UserInfoPage from './views/UserInfoPage';
+import { jwtDecode } from 'jwt-decode';
 
 function App() {
     const [page, setPage] = useState('login');
     const [userInfo, setUserInfo] = useState(null);
 
     const responseMessage = (response) => {
-        console.log(response);
-        setUserInfo(response);
-        setPage('terms');
+        // Decode the credential to extract user information
+        const responseDetails = jwtDecode(response.credential);
+        try {
+            // The credential is already a decoded JWT in this case
+            const userDetails = {
+                name: responseDetails.name,
+                email: responseDetails.email,
+                givenName: responseDetails.givenName,
+                familyName: responseDetails.familyName,
+                picture: responseDetails.picture,
+                emailVerified: responseDetails.emailVerified,
+                domain: responseDetails.hd // If it's a Google Workspace account
+            };
+
+            console.log('User Details:', userDetails);
+            setUserInfo(userDetails);
+            setPage('terms');
+        } catch (error) {
+            console.error('Error processing user information:', error);
+        }
     };
 
     const errorMessage = (error) => {

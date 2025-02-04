@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import LoggedInUserInfo from '../components/LoggedInUserInfo';
 
 interface Question {
   id: number;
@@ -12,7 +13,7 @@ interface FormAnswer {
   file?: File;
 }
 
-const UserInfoPage: React.FC<{ userInfo: { username: string } }> = ({ userInfo }) => {
+const UserInfoPage: React.FC<{ userInfo: { username: string, name: string, email: string, picture: string } }> = ({ userInfo }) => {
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentStep, setCurrentStep] = useState(0);
   const [answers, setAnswers] = useState<FormAnswer[]>([]);
@@ -33,7 +34,7 @@ const UserInfoPage: React.FC<{ userInfo: { username: string } }> = ({ userInfo }
       }
     };
 
-    console.log(userInfo.username);
+    console.log(userInfo);
     //fetchQuestions();
   }, []);
 
@@ -77,9 +78,15 @@ const UserInfoPage: React.FC<{ userInfo: { username: string } }> = ({ userInfo }
 
   const currentQuestion = questions[currentStep];
 
+  const handleLogout = () => {
+    // Implement your logout logic here
+    console.log('User logged out');
+  };
+
   return (
     <div className="user-info-page">
-      <h2>Job Application</h2>
+      <LoggedInUserInfo userInfo={userInfo} onLogout={handleLogout} />
+      <h2>Questions</h2>
       {loading ? (
         <p>Loading questions...</p>
       ) : (

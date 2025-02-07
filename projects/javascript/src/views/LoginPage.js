@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { GoogleLogin } from '@react-oauth/google';
+import image from '../assets/login-page-person3.webp';
 
 function LoginPage({ onSuccess, onError }) {
-    const fullText = '.... create the things you want to see ...';
+    const styles = {
+        backgroundImage: `url(${image})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '98vh', 
+    };
 
     return (
         <div className="app-login">
-            <h2>{fullText}</h2>
             <GoogleLogin onSuccess={onSuccess} onError={onError} />
         </div>
     );

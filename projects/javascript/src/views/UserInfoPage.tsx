@@ -78,9 +78,19 @@ const UserInfoPage: React.FC<{ userInfo: { username: string, name: string, email
 
   const currentQuestion = questions[currentStep];
 
-  const handleLogout = () => {
-    // Implement your logout logic here
-    console.log('User logged out');
+  const handleLogout = async () => {
+    // Wait for gapi to load if it's not already loaded
+    if (!window.gapi?.auth2) {
+      await new Promise<void>((resolve) => {
+        window.gapi.load('auth2', () => resolve());
+      });
+    }
+
+    const auth2 = window.gapi?.auth2.getAuthInstance();
+    if (auth2) {
+      await auth2.signOut();
+      console.log('User logged out from Google');
+    }
   };
 
   return (

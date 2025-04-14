@@ -47,6 +47,8 @@
   },
   "type": "module",
   "devDependencies": {
-    "dotenv": "^16.x.x"
+    "@vitejs/plugin-react": "^4.3.4",
+    "dotenv": "^16.x.x",
+    "vite": "^6.2.6"
   }
 }

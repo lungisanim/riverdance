@@ -14,7 +14,6 @@ import { googleLogout } from '@react-oauth/google';
 
 const App: React.FC = () => {
     const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
-    const [loading, setLoading] = useState(false);
     const [authChecked, setAuthChecked] = useState(false);
 
     useEffect(() => {

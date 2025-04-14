@@ -5,3 +5,25 @@
     justify-content: center;
     height: 100vh;
 }
+
+.app-container {
+  /* Can be simple, or use grid/flex if needed for overall structure */
+  min-height: 100vh;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column; /* Stack top-bar and content */
+  min-height: 100vh;
+}
+
+.content-area {
+  flex-grow: 1; /* Allows content area to fill remaining space */
+  /* Add padding or other styles as needed */
+}
+
+/* Other global styles */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}

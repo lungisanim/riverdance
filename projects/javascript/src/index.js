@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { GoogleOAuthProvider } from '@react-oauth/google'; 
-import App from './app';
+import App from './app.tsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

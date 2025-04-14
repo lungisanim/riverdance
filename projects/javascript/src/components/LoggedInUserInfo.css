@@ -57,4 +57,57 @@
 
 .logout-button:hover {
   background-color: #0056b3; /* Darker shade on hover */
-} 
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f9fa; /* Light background for the top bar */
+  border-bottom: 1px solid #dee2e6; /* Subtle border */
+  height: 60px; /* Example fixed height */
+  box-sizing: border-box;
+}
+
+.top-bar-nav {
+  display: flex;
+  gap: 15px; /* Space between nav links */
+}
+
+.top-bar-nav a {
+  /* Style links if NavLink style prop isn't enough */
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between user items */
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-name {
+  font-weight: 500;
+}
+
+.logout-button {
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #dc3545; /* Example red color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.logout-button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+/* Add media queries for responsiveness if needed */ 

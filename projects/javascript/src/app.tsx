@@ -11,6 +11,7 @@ import GoogleOAuthResponse from './interfaces/GoogleOAuthResponse';
 import QuestionsPage from './views/QuestionsPage';
 import RepositoriesPage from './views/RepositoriesPage';
 import { googleLogout } from '@react-oauth/google';
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const App: React.FC = () => {
     const [userInfo, setUserInfo] = useState<UserInfo | null>(null);

@@ -1,0 +1,62 @@
+[
+  {
+    "questionid": "1",
+    "question": "What is the salary range for this position?"
+  },
+  {
+    "questionid": "2",
+    "question": "Can you describe the company culture and work environment?"
+  },
+  {
+    "questionid": "3",
+    "question": "What are the primary responsibilities and expectations for this role?"
+  },
+  {
+    "questionid": "4",
+    "question": "What opportunities for professional development and career growth are available?"
+  },
+  {
+    "questionid": "5",
+    "question": "How is performance evaluated in this position?"
+  },
+  {
+    "questionid": "6",
+    "question": "What is the typical career path for someone in this role?"
+  },
+  {
+    "questionid": "7",
+    "question": "Can you tell me about the team I would be working with?"
+  },
+  {
+    "questionid": "8",
+    "question": "What are the biggest challenges facing the company/department right now?"
+  },
+  {
+    "questionid": "9",
+    "question": "What does success look like in this position after 3 months? After 1 year?"
+  },
+  {
+    "questionid": "10",
+    "question": "What is the company's approach to work-life balance?"
+  },
+  {
+    "questionid": "11",
+    "question": "Are there opportunities for remote work or flexible hours?"
+  },
+  {
+    "questionid": "12",
+    "question": "What is the company's policy on continuing education and professional certifications?"
+  },
+  {
+    "questionid": "13",
+    "question": "Can you describe the onboarding and training process for new hires?"
+  },
+  {
+    "questionid": "14",
+    "question": "What are the next steps in the interview process?"
+  },
+  {
+    "questionid": "15",
+    "question": "Can you provide a detailed job description or specification for this position?"
+  }
+]

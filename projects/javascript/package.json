@@ -23,9 +23,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "node scripts/fetch-terms.cjs && vite build",
+    "build": "node scripts/fetch-terms.cjs && npx vite build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean": "rimraf dist node_modules/.vite"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +50,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "dotenv": "^16.x.x",
-    "vite": "^6.2.6"
+    "rimraf": "^5.0.0",
+    "vite": "^6.3.3"
   }
 }
